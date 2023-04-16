@@ -7,4 +7,4 @@
     }
     return result;
 }
-Console.WriteLine(NaturalDegree(5, 4));
+Console.WriteLine(NaturalDegree(5, 3));
