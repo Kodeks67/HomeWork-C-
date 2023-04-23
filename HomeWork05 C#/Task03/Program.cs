@@ -22,7 +22,11 @@ double MaxVal(double[] diff)
     double maxIndex = 0;
     for (int i = 0; i < diff.Length; i++)
     {
-        if (maxVal < diff[i]) maxVal = diff[i]; maxIndex = i;
+        if (maxVal < diff[i]) 
+        {
+        maxVal = diff[i]; 
+        maxIndex = i;
+        }
     }
     return maxVal;
 }
@@ -33,7 +37,11 @@ double MinVal(double[] diff)
     double minIndex = 0;
     for (int i = 0; i < diff.Length; i++)
     {
-        if (minVal > diff[i]) minVal = diff[i]; minIndex = i;
+        if (minVal > diff[i]) 
+        {
+        minVal = diff[i]; 
+        minIndex = i;
+        }
     }
     return minVal;
 }
