@@ -4,7 +4,6 @@
     for (int i = 0; i < size; i++)
     {
         array[i] = new Random().Next(minValue, maxValue);
-        // array[i] = int.Parse(Console.ReadLine()); -- записывает в столбик числа массива 
     }
     return array;
 }
