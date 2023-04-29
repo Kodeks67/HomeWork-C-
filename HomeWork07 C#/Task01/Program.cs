@@ -1,9 +1,4 @@
-﻿void RandomNumbers(int firstnumber, int secondnumber)
-{
-    int rnd = new Random().Next(firstnumber, secondnumber);
-}
-
-double[,] CreateTwoDimensionArray(int firstLength, int secondLength, int firstnumber, int secondnumber)
+﻿double[,] CreateTwoDimensionArray(int firstLength, int secondLength, int firstnumber, int secondnumber)
 {
     double[,] array = new double[firstLength, secondLength];
 
