@@ -20,7 +20,7 @@ void arithmeticMean(int[,] array)
             // sumColumn = sumColumn + index(array[0, 1])
             sumColumn += array[j, i];
             }
-        Console.WriteLine($"столбец {i} - {sumColumn / array.GetLength(0)} ");
+        Console.WriteLine($"среднее арифметическое столбеца {i + 1} - {sumColumn / array.GetLength(0)} ");
     }
 }
 
