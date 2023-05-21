@@ -9,22 +9,26 @@
     return array;
 }
 
-void Sortirovka(int[,] array)
+void MinRows(int[,] array)
 {
+    int max = 0;
+    int maxRows = 0;
     for (int i = 0; i < array.GetLength(0); i++)
+    {
+        int sum = 0;
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int k = array.GetLength(1) - 1; k > j; k--)
+            sum += array[i, j];
+            if (sum > max)
             {
-                if (array[i, k] > array[i, k - 1])
-                {
-                    int temp = array[i, k];
-                    array[i, k] = array[i, k - 1];
-                    array[i, k - 1] = temp;
-                }
+                max = sum;
+                maxRows = i + 1;
             }
-
         }
+    }
+    
+    System.Console.WriteLine($"Максимальная сумма строки = {max}");
+    System.Console.WriteLine($"Номер строки = {maxRows}");
 }
 
 void PrintArray(int[,] array)
@@ -38,6 +42,6 @@ void PrintArray(int[,] array)
 }
 int[,] array = CreateTwoDimensionArray(4, 4);
 PrintArray(array);
-Sortirovka(array);
+MinRows(array);
 Console.WriteLine("");
-PrintArray(array);
+// PrintArray(array);
